@@ -25,7 +25,7 @@ public class RateRetriever {
         return response.getBody();
     }
 
-    @Scheduled(fixedRate = 60000)
+    @Scheduled(fixedRate = 600000)
     public void updateCache(){
         cacheManager.getCache("rates").clear();
         getRate();
